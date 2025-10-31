@@ -35,21 +35,32 @@ void xor_cipher_process(const char *inputFileName, const char *outputFileName, c
     printf("\n--- Operation successful ---\n");
 }
 
-// Function to display menu and handle user choices
+// Function to display description, menu, and handle user choices
 void run_menu() {
     int choice;
     char inputFile[100];
     char outputFile[100];
     char password[100];
 
+    // **********************************************
+    // NEW ADDITION: Project Description
+    // **********************************************
+    printf("\n=======================================================\n");
+    printf("              UNIX FILE CRYPTO UTILITY          \n");
+    printf("=======================================================\n");
+    printf("This is a menu-driven UNIX-based utility developed using\n");
+    printf("the C programming language. Its primary function is to\n");
+    printf("secure files through encryption and decryption using the\n");
+    printf("simple yet effective 'XOR Cipher' algorithm. \n");
+    printf("-------------------------------------------------------\n");
+    
     while (1) { // Loop until the user selects 'Exit'
-        printf("\n===================================\n");
-        printf("  UNIX FILE ENCRYPTION TOOL (XOR)  \n");
-        printf("===================================\n");
+        printf("\n| M A I N   M E N U |\n");
+        printf("---------------------\n");
         printf("1. Encrypt File\n");
         printf("2. Decrypt File\n");
         printf("3. Exit Program\n");
-        printf("-----------------------------------\n");
+        printf("---------------------\n");
         printf("Enter your choice (1-3): ");
 
         // Read user input
@@ -80,7 +91,6 @@ void run_menu() {
                 printf("Enter input (Encrypted) file name: ");
                 scanf("%99s", inputFile);
                 printf("Enter output (Decrypted) file name: ");
-                scanf("%99s", outputFile);
                 printf("Enter Password/Key (MUST BE THE SAME as Encryption key): ");
                 scanf("%99s", password);
                 xor_cipher_process(inputFile, outputFile, password);
