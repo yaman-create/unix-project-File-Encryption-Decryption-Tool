@@ -47,11 +47,12 @@ xor_cipher_process() {
     # Write the final hex string back to a file
     echo "$PROCESSED_HEX" | xxd -r -p > "$OUTPUT_FILE"
     
-    if [ $? -eq 0 ]; then
-        echo -e "\n--- Operation successful ---\n"
-    else
-        echo -e "\n--- Operation failed ---\n"
-    fi
+   
+if [ $? -eq 0 ]; then
+    echo -e "\n--- File Processing Completed ---\n" 
+else
+    echo -e "\n--- File Processing Failed ---\n"
+fi
 }
 
 # Function to display description, menu, and handle user choices
