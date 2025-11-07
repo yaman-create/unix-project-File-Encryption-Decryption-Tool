@@ -30,7 +30,7 @@ This tool uses **XOR Cipher logic** to encrypt and decrypt files and demonstrate
 ## ▶️ How to Run
 
 ### **1️⃣ Give execute permission**
-```bash
+
 chmod +x crypto.sh
 ./crypto.sh
 
@@ -41,5 +41,4 @@ chmod +x crypto.sh
 
 
 <img width="727" height="222" alt="Decryption Screenshot" src="https://github.com/user-attachments/assets/99b9ac43-fa09-46cc-ac1c-e409ddebb1dc" />
-```
 
